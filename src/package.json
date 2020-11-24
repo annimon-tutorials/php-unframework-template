@@ -1,0 +1,20 @@
+{
+  "name": "app-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --no-source-map --style=compressed scss/styles.scss:../public/dist/css/styles.css",
+    "uglify": "uglifyjs js/*.js -c -m -o ../public/dist/js/app.js",
+    "dist": "npm run scss && npm run uglify"
+  },
+  "author": "aNNiMON",
+  "license": "MIT"
+}

@@ -1,0 +1,5 @@
+cache
+vendor
+public/dist/css/*.css
+public/dist/js/*.js
+src/node_modules

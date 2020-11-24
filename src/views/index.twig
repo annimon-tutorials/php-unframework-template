@@ -1,0 +1,17 @@
+{% extends "layout/main.twig" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+  <nav class="nav navbar-light bg-light">
+    <a class="nav-link active" href="/">{{ meta.name}}</a>
+    <a class="nav-link" href="/about/">About</a>
+  </nav>
+  <main class="col-md-8 py-md-2 pl-md-3 bd-content">
+    <b>Name</b>: {{ meta.name }}<br/>
+    <b>Message</b>: {{ meta.message }}<br/>
+    <b>Copyright</b>: {{ meta.copyright }}<br/>
+    <b>Username</b>: {{ user.name }}<br/>
+    <b>User</b>: <pre>{{ dump(user) }}</pre>
+  </main>
+{% endblock %}

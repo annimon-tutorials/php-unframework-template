@@ -1,0 +1,20 @@
+{% set meta = app.config.metadata %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes" />
+  <link rel="stylesheet" href="/dist/css/styles.css" />
+  <title>{% block title %}{% endblock %} | {{ meta.name }}</title>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <div class="container">
+    {% block content %}{% endblock %}
+    <div class="footer p-1 bg-light text-muted">{{ meta.copyright }} {{ "now"|date('Y') }}</div>
+  </div>
+  {% block scripts %}
+    <script src="/dist/js/app.js"></script>
+  {% endblock %}
+</body>
+</html>
